@@ -8,19 +8,19 @@ app.get('/', function (req, res) {
 });
 
 app.get('/google', function(req, res) {
-    var display = req.param('display');
+    var display = req.query.display;
     console.log(display);
     open.open('https://www.google.com/search?q=' + display);
 });
 
 app.get('/wiki', function(req, res) {
-    var display = req.param('display');
+    var display = req.query.display;
     console.log(display);
     open.open('https://en.wikipedia.org/wiki/' + display);
 });
 
 app.get('/image', function(req, res) {
-    var display = req.param('display');
+    var display = req.query.display;
     console.log(display);
     open.open('https://www.google.com/search?hl=en&site=imghp&tbm=isch&source=hp&biw=1279&bih=676&q=' + display);
 });
