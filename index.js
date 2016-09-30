@@ -3,6 +3,10 @@ var express = require('express');
 var app = express();
 var open = require('openurl');
 
+app.get('/', function (req, res) {
+   res.send('Alexa Display Conntected');
+});
+
 app.get('/google', function(req, res) {
     var display = req.param('display');
     console.log(display);
